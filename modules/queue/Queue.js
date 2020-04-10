@@ -51,18 +51,21 @@ class Queue {
   }
 
   all() {
+    const array = []
+
     if (this.first === null) {
-      return 'Cannot display an empty queue';
+      return array;
     }
+
     let currNode = this.first;
-    let queueString = '';
     while (currNode.next !== null) {
-      queueString += `${currNode.value} => `;
+      array.push(currNode.value);
       currNode = currNode.next;
     }
-    queueString += `${currNode.value}`;
-    return queueString;
+
+    array.push(currNode.value);
+    return array;
   }
 }
 
-module.exports = Queue
+module.exports = Queue;
