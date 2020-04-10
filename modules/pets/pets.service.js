@@ -23,3 +23,5 @@ module.exports = {
     pets[`${type}`].dequeue();
   }
 };
+
+console.log(pets.cats.arrayOfNodeValues())
