@@ -7,12 +7,17 @@ const People = require('../people/people.service');
 const router = express.Router();
 
 router.get('/', (req, res) => {
- Pets.get()
-  .then();
+  res.json(Pets.get())
 });
 
 router.delete('/', json, (req, res) => {
   // Remove a pet from adoption.
+  const { type } = req.body;
+  const typeOfPet = type;
+
+  Pets.dequeue(type)
+
+  res.set(204).end()
 });
 
 module.exports = router;
