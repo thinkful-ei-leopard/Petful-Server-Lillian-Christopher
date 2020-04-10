@@ -19,11 +19,4 @@ router.post('/', json, (req, res) => {
   res.set(201).json(person);
 });
 
-router.delete('/', json, (req, res) => {
-  // remove first person from queue
-  People.dequeue();
-
-  res.set(204).end();
-});
-
 module.exports = router;
