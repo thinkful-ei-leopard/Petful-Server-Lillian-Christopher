@@ -15,7 +15,7 @@ router.delete('/', json, (req, res) => {
   const { type } = req.body;
   const typeOfPet = type;
 
-  Pets.dequeue(type)
+  Pets.dequeue(typeOfPet)
 
   res.set(204).end()
 });
