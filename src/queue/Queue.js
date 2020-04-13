@@ -51,7 +51,7 @@ class Queue {
   }
 
   all() {
-    const array = []
+    const array = [];
 
     if (this.first === null) {
       return array;
