@@ -1,8 +1,8 @@
 {
   "name": "petful-server",
   "scripts": {
-    "dev": "nodemon modules/app/server.js",
-    "start": "node modules/app/server.js",
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
     "predeploy": "npm audit",
     "deploy": "git push heroku master"
   },
