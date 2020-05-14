@@ -26,22 +26,17 @@ class Queue {
   }
 
   dequeue() {
-    if(this.first === null){
-      return;
-    }
-    const node =this.first;
-    if (node.next === null) {
-      this.first = null;
-      this.last = null;
-      return;
-    }
-    let newFirst = node.next; //null 
-    newFirst.prev = null;
-    this.first = newFirst;
-    if (node === this.last){
-      this.last = null;
-    }
-    return node.value;
+    
+   if (this.first === null) {
+       return;
+   }
+   const node = this.first;
+   this.first = this.first.next;
+   
+   if (node === this.last) {
+       this.last = null;
+   }
+   return node.value;
   }
 
   show() {
